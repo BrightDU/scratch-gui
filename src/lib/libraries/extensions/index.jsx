@@ -46,8 +46,11 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
-import newBlockImage from './newblocks/newblocks.png';
-import newBlockButtonImage from './newblocks/newblocks-small.png';
+import graphqlImage from './graphql/newblock.png';
+import graphqlButtonImage from './graphql/newblock-small.png';
+
+import newblockImage from './newblock/newblock.png';
+import newblockButtonImage from './newblock/newblock-small.png';
 
 
 export default [
@@ -324,15 +327,36 @@ export default [
     }
 ,
     {
-        name: 'NewBlocks',
-        extensionId: 'newblocks',
+        name: 'GraphQLBlocks',
+        extensionId: 'graphqlblock',
         collaborator: 'Me',
-        iconURL: newBlockImage,
-        insetIconURL: newBlockButtonImage,
+        iconURL: graphqlImage,
+        insetIconURL: graphqlButtonImage,
         description: (
             <FormattedMessage
-                defaultMessage="New blocks."
-                description="my block"
+                defaultMessage="GraphQL blocks."
+                description="graphql block"
+                id="gui.extension.graphql.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://scratch.mit.edu/wedo'
+
+    }
+    ,
+    {
+        name: 'DeveloperSample',
+        extensionId: 'newblock',
+        collaborator: 'Me',
+        iconURL: newblockImage,
+        insetIconURL: newblockButtonImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Developer samples"
+                description="Block type sample for developing original block"
                 id="gui.extension.newblocks.description"
             />
         ),
