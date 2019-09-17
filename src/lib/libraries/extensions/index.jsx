@@ -52,6 +52,8 @@ import graphqlButtonImage from './graphql/newblock-small.png';
 import newblockImage from './newblock/newblock.png';
 import newblockButtonImage from './newblock/newblock-small.png';
 
+import slackImage from './slack/slack.png';
+import slackButtonImage from './slack/slack-small.png';
 
 export default [
     {
@@ -363,8 +365,25 @@ export default [
         featured: true,
         disabled: false,
         internetConnectionRequired: true,
+        bluetoothRequired: false
+    }
+    ,
+    {
+        name: 'Slack',
+        extensionId: 'slack',
+        collaborator: 'Me',
+        iconURL: slackImage,
+        insetIconURL: slackButtonImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Slack blocks"
+                description="Block type sample for slack"
+                id="gui.extension.slack.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
         bluetoothRequired: false,
-        helpLink: 'https://scratch.mit.edu/wedo'
-
     }
 ];
